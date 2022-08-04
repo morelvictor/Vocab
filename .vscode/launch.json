@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Vocab",
+            "program": ".build/debug/Vocab",
+            "args": [],
+            "cwd": "${workspaceFolder:Vocab}",
+            "preLaunchTask": "swift: Build Debug Vocab"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Vocab",
+            "program": ".build/release/Vocab",
+            "args": [],
+            "cwd": "${workspaceFolder:Vocab}",
+            "preLaunchTask": "swift: Build Release Vocab"
+        }
+    ]
+}
