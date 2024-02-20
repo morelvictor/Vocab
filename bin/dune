@@ -1,0 +1,4 @@
+(executable
+ (public_name Vocab)
+ (name main)
+ (libraries Vocab))
