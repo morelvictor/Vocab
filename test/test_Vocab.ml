@@ -5,7 +5,7 @@ let voc =
   in
   {
     title = "Test";
-    length = 1;
+    length = ref 1;
     list = ref [ un ];
     in_language = French;
     out_language = English;

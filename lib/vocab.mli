@@ -15,6 +15,7 @@ type vocab_list = {
   out_language : language;
 }
 
+val init : unit -> unit
 val save_list : vocab_list -> unit
 val load_list : string -> vocab_list
 val pp_list : Format.formatter -> vocab_list -> unit

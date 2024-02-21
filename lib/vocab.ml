@@ -17,7 +17,15 @@ type vocab_list = {
 
 type mode = Edit | Train | Add
 
-let gen_filename title = "/Users/victormorel/Vocab/" ^ title ^ ".voc"
+let gen_filename title = (Unix.getenv "HOME") ^ "/Vocab/" ^ title ^ ".voc"
+
+let init() =
+   let path = (Unix.getenv "HOME") ^ "/Vocab" in
+   try
+      let s = Unix.lstat path in
+      if s.st_kind <> Unix.S_DIR
+         then failwith ("The path exist but is not a directory, please remove this file and rerun: " ^ path)
+   with _ -> Unix.mkdir path (0b111101101)
 
 let save_list list =
   let channel = list.title |> gen_filename |> open_out in
